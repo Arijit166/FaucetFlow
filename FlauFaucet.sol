@@ -1,22 +1,36 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract HelloWorld {
-    // State variable to store the greeting message
-    string public greeting;
+/*
+🪙 SimpleBank
+-------------
+A beginner-friendly Solidity project that lets users deposit and withdraw Ether.
+It demonstrates:
+✅ State variables and mappings
+✅ Payable functions
+✅ Require checks and balance tracking
+✅ Basic user interaction with smart contracts
+*/
 
-    // Constructor runs once at deployment
-    constructor(string memory _greeting) {
-        greeting = _greeting;
+contract SimpleBank {
+    // Mapping to store each user's balance
+    mapping(address => uint256) public balances;
+
+    // Deposit Ether into the contract
+    function deposit() public payable {
+        require(msg.value > 0, "Deposit amount must be greater than 0");
+        balances[msg.sender] += msg.value;
     }
 
-    // Function to update the greeting message
-    function setGreeting(string memory _newGreeting) public {
-        greeting = _newGreeting;
+    // Withdraw Ether from the contract
+    function withdraw(uint256 _amount) public {
+        require(balances[msg.sender] >= _amount, "Insufficient balance");
+        balances[msg.sender] -= _amount;
+        payable(msg.sender).transfer(_amount);
     }
 
-    // Function to return the greeting message
-    function getGreeting() public view returns (string memory) {
-        return greeting;
+    // Check your balance
+    function getBalance() public view returns (uint256) {
+        return balances[msg.sender];
     }
 }
