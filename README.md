@@ -1,4 +1,4 @@
-# 👋 Hello World Solidity Contract
+# 👋 SimpleBank Solidity Contract
 
 A simple smart contract that stores and returns a greeting message.
 Perfect for beginners to understand strings, state variables, function visibility, and deployment basics in Solidity.
@@ -20,7 +20,7 @@ Perfect for beginners to understand strings, state variables, function visibilit
 - Call setGreeting("Hi, Ethereum!") → updates the greeting message
 - Check on Etherscan (optional)
 
-### Deployed on **Flow Testnet** at: 0x3f5788685023710A220A65d36e2D25229634b8bB
+### Deployed on **Flow Testnet** at: 0xBB52424185f10868A484229C8c82ACb44853dB80
 ## 🛠️ Requirements
 
 - Remix IDE (no installation required)
