@@ -45,7 +45,7 @@ It allows users to deposit, withdraw, and check their Ether balance directly on 
 
 - getBalance() → Check your balance
 
-  ## Deployed at Flow Testnet in contact address - 0xBB52424185f10868A484229C8c82ACb44853dB80
+  ## Deployed at Flow Testnet in contract address 👇 0xBB52424185f10868A484229C8c82ACb44853dB80
 
 ## 🧠 Learning Outcomes
 
